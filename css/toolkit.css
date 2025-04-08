@@ -1,59 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap');
 
-:root {
-    --primary-color: #006D69;
-    --secondary-color: #d9edc2;
-    --accent-color: #2d632f;
-    --light-bg: #f5fbe8;
-    --dark-text: #333;
-    --white: #fff;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
+/* reset/global box sizing */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f5fbe8;
-    color: #333;
+    box-sizing: border-box;
 }
 
+/* variables */
+:root {
+    /* colors */
+    --primary-green: #006D69;
+    --secondary-green: #D7F0BE;
+    --info-text: #242627; 
+    --footer-text: #D9D9D9;     
+    --background-color: #EFF2DF;
+
+    /* fonts */
+    --heading-font: 'Outfit', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+html {        
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+    
+/* Body */
+body {
+    margin: 0;  
+    padding: 0;
+    background-color: var(--background-color);
+    font-family: var(--body-font);
+    color: var(--info-text);
+}
+
+/* header section - identical to index.css */
 header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 10%;
-    background-color: #d9edc2;
+    padding: 10px 100px;
 }
 
 .logo {
+    height: 50;
+}
+
+.navbar {
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 
-nav ul {
-    list-style: none;
+.nav-list {
     display: flex;
-    gap: 15px;
+    list-style: none;
 }
 
-nav a {
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list li a {
     text-decoration: none;
     color: #006D69;
-    font-weight: 700;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
+    font-family: var(--body-font);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: color 0.3s;
 }
 
-nav a:hover {
-    background-color: rgba(0, 109, 105, 0.1);
+.nav-list li a:hover {
+    color: #97BC2E;
+} 
+
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 15px;
 }
 
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    height: 2px;
+    background-color: #BDDD60;
+}
 
+/* Case Study Section */
 .case-section {
-    padding: 80px 10%;
-    text-align: center;
+    padding: 50px 100px;
 }
 
 .case-container {
@@ -61,118 +105,199 @@ nav a:hover {
     margin: 0 auto;
 }
 
-h1 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
+.case-section h1 {
+    color: var(--primary-green);
+    font-family: var(--heading-font);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
+.lead {
+    color: var(--primary-green);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+/* Toolkit Grid */
 .toolkit-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 40px;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .toolkit-section {
-    background: var(--white);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    text-align: left;
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .toolkit-section h2 {
-    color: var(--accent-color);
-    margin-bottom: 15px;
+    color: var(--primary-green);
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--secondary-green);
+    padding-bottom: 0.5rem;
 }
 
+.toolkit-section h3 {
+    color: var(--primary-green);
+    font-family: var(--heading-font);
+    font-size: 1.3rem;
+    margin: 1.5rem 0 1rem;
+}
+
+/* Lists */
 .benefit-list,
+.strategy-category ul,
 .steps-list {
-    padding-left: 20px;
-    line-height: 1.8;
+    margin-left: 1.5rem;
+    line-height: 1.6;
 }
 
+.benefit-list li,
+.strategy-category ul li,
+.steps-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Tool Cards */
 .tool-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
 }
 
 .tool-card {
-    background: var(--secondary-color);
-    padding: 15px 20px;
-    border-radius: 8px;
+    background-color: var(--secondary-green);
+    color: var(--primary-green);
+    padding: 1rem;
+    border-radius: 5px;
     text-align: center;
-    color: var(--accent-color);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
     transition: all 0.3s ease;
+    border: 1px solid rgba(0, 109, 105, 0.2);
 }
 
 .tool-card:hover {
-    transform: translateY(-5px);
-    background: #c3e0a6;
+    background-color: var(--primary-green);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Results Table */
 .results-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 1.5rem 0;
 }
 
 .results-table th,
 .results-table td {
-    padding: 12px;
-    border: 1px solid var(--secondary-color);
+    padding: 0.75rem;
     text-align: left;
+    border-bottom: 1px solid var(--secondary-green);
 }
 
 .results-table th {
-    background-color: var(--accent-color);
-    color: var(--white);
+    background-color: var(--secondary-green);
+    color: var(--primary-green);
+}
+
+.results-table tr:hover {
+    background-color: rgba(215, 240, 190, 0.3);
 }
 
 .stat-note {
     font-style: italic;
-    color: #666;
-    margin-top: 15px;
+    color: var(--primary-green);
+    margin-top: 1rem;
 }
 
+/* Footer */
 footer {
-    background-color: var(--accent-color);
-    color: var(--white);
-    text-align: center;
-    padding: 30px 10%;
+    background-color: var(--primary-green);
+    color: var(--footer-text);
+    padding: 2rem 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
 }
 
 .footer-links a {
-    color: var(--white);
+    color: var(--footer-text);
     text-decoration: none;
-    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-green);
 }
 
 .newsletter {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.newsletter p {
+    font-weight: 500;
 }
 
 .newsletter input {
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-right: 5px;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
 }
 
 .newsletter button {
-    background-color: var(--white);
-    color: var(--accent-color);
-    padding: 8px 12px;
+    background-color: var(--secondary-green);
+    color: var(--primary-green);
     border: none;
-    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    font-weight: 500;
+    transition: all 0.3s;
 }
 
 .newsletter button:hover {
-    background-color: #e0f2e0;
+    background-color: #BDDD60;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+    
+    .case-section {
+        padding: 30px 20px;
+    }
+    
+    footer {
+        padding: 2rem 20px;
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+/* kommentar linje for test */
