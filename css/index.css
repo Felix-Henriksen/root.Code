@@ -64,7 +64,7 @@ header {
 
 .nav-list li a {
     text-decoration: none;
-    color: #006D69;
+    color: var(--primary-green);
     font-family: var(--body-font);
     font-size: 20px;
     font-style: normal;
@@ -131,6 +131,7 @@ h1 {
     display: inline-block;
     background-color: #006d69;
     color: white;
+    font-family: var(--heading-font);
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
@@ -145,3 +146,35 @@ h1 {
     transform: translateY(-2px); 
 }
 
+.featured-section {
+    padding: 50px 100px;
+    text-align: left;
+}
+
+.small-title {
+    color: #006D69;
+    font-family: var(--body-font);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+    letter-spacing: 4.8px;
+    margin-bottom: 20px;
+}
+
+.featured-logos {
+    background-color: #D7F0BE;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 40px;
+    margin: 0 20px;
+}
