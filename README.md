@@ -1,3 +1,3 @@
 # root.Code Repository
 
-Kode og versjonkontroll for root./Project Captsone Green Code PRO1000.
+Dette er linken til nettsiden vår https://felix-henriksen.github.io/root.Code/
