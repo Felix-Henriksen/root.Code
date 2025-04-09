@@ -6,6 +6,7 @@
     <link rel="icon" type="img/png" href="images/favicon.png">
     <title>The root. Project</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -38,7 +39,7 @@
             <div class="hero-content">
                 <h1>Building A Greener Future With Sustainable Coding</h1>
                 <p class="tagline">Learn how to optimize software for energy efficiency and reduce carbon footprints</p>
-                <a href="toolkit.html" class="get-started button">GET STARTED</a> <!--lag det som en button i css-->
+                <a href="toolkit.html" class="get-started button">GET STARTED</a>
             </div>
             <div class="hero-image" aria-label="techtree hero icon">
                 <svg width="257" height="419" viewBox="0 0 257 419" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -87,9 +88,9 @@
                 <div class="greencode-icon">
                     <img src="images/codeIcon.svg" alt="green code icon">
                 </div>
-                <h2>What Is Green Coding?</h2>
+                <h2 class="greencode-h2">What Is Green Coding?</h2>
                 <p class="info-txt">Green coding creates sustainable software by writing efficient code that lowers energy use and shrinks digital carbon footprints.</p>
-                <a href="case-studies.html" class="read-definition">READ OUR DEFINITION</a> <!--lag det til en button i css-->
+                <a href="case-studies.html" class="read-definition">READ OUR DEFINITION</a> 
             </article>
         </section>
 <!--mission section-->
@@ -98,7 +99,7 @@
                 <div class="mission-icon">
                     <img src="images/missionIcon.svg" alt="mission icon">
                 </div>
-                <h2>Our Mission</h2>
+                <h2 class="mission-h2">Our Mission</h2>
                 <p class="info-txt">Our mission is to inspire and equip developers with the knowledge and tools to build sustainable software. By fostering eco-friendly coding practices, we strive to drive positive environmental change in the tech industry.</p>
             </article>
         </section>
@@ -118,35 +119,32 @@
 <!--FOOTER-->
     <footer>
         <div class="footer-content">
-    <!-- brand section -->
+            <!-- brand section -->
             <div class="footer-brand">
-                <a href="/">
-                    <img src="images/rootLogo.svg" alt="root. logo" class="footer-logo"> <!--endre farge i css-->
-                </a>
+                <img src="images/rootlogo.svg" alt="root. logo" class="footer-logo">
                 <p class="copyright-txt">Copyright © 2025 root. Project Capstone. All rights reserved.</p>
+                <div class="social-links">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/Felix-Henriksen/root.Code" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-    <!-- social links -->
-            <div class="social-links">
-                <h3 class="small-title">CONNECT WITH US</h3>
-                <ul>
-                    <li>
-                        <a href="https://github.com/Felix-Henriksen/root.Code" target="_blank" rel="noopener noreferrer">
-                            <img src="images/githublogo.svg" alt="Visit our GitHub">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
-                            <img src="images/Twitter-X-Logo.svg" alt="Follow us on X">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                            <img src="images/linkedinlogo.svg" alt="Connect on LinkedIn">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-    <!-- footer navigation -->
+            
+            <!-- footer navigation -->
             <nav class="footer-nav">
                 <div class="legal">
                     <h3 class="small-title">LEGAL</h3>
@@ -164,7 +162,8 @@
                     </ul>
                 </div>
             </nav>
-    <!-- newsletter signup -->
+            
+            <!-- newsletter signup -->
             <div class="newsletter">
                 <h3 class="small-title">JOIN OUR NEWSLETTER</h3>
                 <form class="signup-form">
