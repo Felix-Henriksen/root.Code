@@ -87,7 +87,7 @@
                 <div class="greencode-icon">
                     <img src="images/codeIcon.svg" alt="green code icon">
                 </div>
-                <h2>What Is Green Coding?</h2>
+                <h2 class="greencode-h2">What Is Green Coding?</h2>
                 <p class="info-txt">Green coding creates sustainable software by writing efficient code that lowers energy use and shrinks digital carbon footprints.</p>
                 <a href="case-studies.html" class="read-definition">READ OUR DEFINITION</a> <!--lag det til en button i css-->
             </article>
@@ -98,7 +98,7 @@
                 <div class="mission-icon">
                     <img src="images/missionIcon.svg" alt="mission icon">
                 </div>
-                <h2>Our Mission</h2>
+                <h2 class="mission-h2">Our Mission</h2>
                 <p class="info-txt">Our mission is to inspire and equip developers with the knowledge and tools to build sustainable software. By fostering eco-friendly coding practices, we strive to drive positive environmental change in the tech industry.</p>
             </article>
         </section>
@@ -116,18 +116,14 @@
         </section>
     </main>
 <!--FOOTER-->
-    <footer>
-        <div class="footer-content">
-    <!-- brand section -->
-            <div class="footer-brand">
-                <a href="/">
-                    <img src="images/rootLogo.svg" alt="root. logo" class="footer-logo"> <!--endre farge i css-->
-                </a>
-                <p class="copyright-txt">Copyright © 2025 root. Project Capstone. All rights reserved.</p>
-            </div>
-    <!-- social links -->
+<footer>
+    <div class="footer-content">
+        <!-- brand section -->
+        <div class="footer-brand">
+            <img src="images/rootLogo.svg" alt="root. logo" class="footer-logo">
+            <p class="copyright-txt">Copyright © 2025 root. Project Capstone. All rights reserved.</p>
+            <!-- social links -->
             <div class="social-links">
-                <h3 class="small-title">CONNECT WITH US</h3>
                 <ul>
                     <li>
                         <a href="https://github.com/Felix-Henriksen/root.Code" target="_blank" rel="noopener noreferrer">
@@ -146,42 +142,45 @@
                     </li>
                 </ul>
             </div>
-    <!-- footer navigation -->
-            <nav class="footer-nav">
-                <div class="legal">
-                    <h3 class="small-title">LEGAL</h3>
-                    <ul>
-                        <li><a href="/trademark">Trademark Policy</a></li>
-                        <li><a href="/privacy">Terms and Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="more">
-                    <h3 class="small-title">MORE</h3>
-                    <ul>
-                        <li><a href="/membership">Membership enquiries</a></li>
-                        <li><a href="/join">Join us</a></li>
-                        <li><a href="/help">Helpdesk</a></li>
-                    </ul>
-                </div>
-            </nav>
-    <!-- newsletter signup -->
-            <div class="newsletter">
-                <h3 class="small-title">JOIN OUR NEWSLETTER</h3>
-                <form class="signup-form">
-                    <div class="form-group">
-                        <input 
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="you@example.com"
-                            required
-                            aria-describedby="email-help"
-                        >
-                    </div>
-                    <button type="submit" class="signup-button">Sign up</button>
-                </form>
-            </div>
         </div>
-    </footer>
+        
+        <!-- footer navigation -->
+        <nav class="footer-nav">
+            <div class="legal">
+                <h3 class="small-title">LEGAL</h3>
+                <ul>
+                    <li><a href="/trademark">Trademark Policy</a></li>
+                    <li><a href="/privacy">Terms and Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="more">
+                <h3 class="small-title">MORE</h3>
+                <ul>
+                    <li><a href="/membership">Membership enquiries</a></li>
+                    <li><a href="/join">Join us</a></li>
+                    <li><a href="/help">Helpdesk</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- newsletter signup -->
+        <div class="newsletter">
+            <h3 class="small-title">JOIN OUR NEWSLETTER</h3>
+            <form class="signup-form">
+                <div class="form-group">
+                    <input 
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                        aria-describedby="email-help"
+                    >
+                </div>
+                <button type="submit" class="signup-button">Sign up</button>
+            </form>
+        </div>
+    </div>
+</footer>
 </body>
 </html> 
