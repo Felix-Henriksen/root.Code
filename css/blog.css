@@ -77,13 +77,6 @@ header {
     color: #97BC2E;
 } 
 
-.search-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-left: 15px;
-}
-
 header::after {
     content: "";
     position: absolute;
