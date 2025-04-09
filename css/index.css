@@ -378,6 +378,22 @@ h1 {
     }
 }
 
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply fade-in animation */
+.fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
 
 
 
