@@ -111,7 +111,7 @@ h1 {
     font-family: var(--heading-font);
     font-size: 75px;
     font-weight: 700;
-    line-height: 100%; /* 75px */
+    line-height: 100%; 
     text-transform: capitalize;
     width: 694px;
     height: 252px;
@@ -123,7 +123,7 @@ h1 {
     font-family: var(--body-font);
     font-size: 24px;
     font-weight: 400;
-    line-height: 120%; /* 28.8px */
+    line-height: 120%; 
     margin-bottom: 50px;
 }
 
@@ -206,7 +206,7 @@ h1 {
     font-size: 55px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 55px */
+    line-height: 100%; 
     text-transform: capitalize;
     margin-bottom: 20px;
 }
@@ -267,7 +267,7 @@ h1 {
     font-size: 55px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 55px */
+    line-height: 100%; 
     text-transform: capitalize;
     margin-bottom: 20px;
 }
@@ -411,12 +411,12 @@ footer {
     letter-spacing: 4.8px;
 }
 
-/* Underline with dot for footer headings */
+
 .footer-nav h3.small-title,
 .newsletter h3.small-title {
     position: relative;
     display: inline-block;
-    padding-bottom: 10px; /* Space for the underline */
+    padding-bottom: 10px; 
 }
 
 .footer-nav h3.small-title::after,
