@@ -1,93 +1,143 @@
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap');
 
-    /* reset/global box sizing */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+/* reset/global box sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    /* variables */
-    :root {
-        /* farger */
-        --primary-green: #006D69;
-        --secondary-green: #D7F0BE;
-        --info-text: #242627; 
-        --footer-text: #D9D9D9;     
-        --background-color: #EFF2DF;
+/* variables */
+:root {
+    /* farger */
+    --primary-green: #006D69;
+    --secondary-green: #D7F0BE;
+    --info-text: #242627; 
+    --footer-text: #D9D9D9;     
+    --background-color: #EFF2DF;
 
-        /* fonter */
-        --heading-font: 'Outfit', sans-serif;
-        --body-font: 'Roboto', sans-serif;
-    }
+    /* fonter */
+    --heading-font: 'Outfit', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+}
 
-    html {        
-        font-size: 16px;
-        scroll-behavior: smooth;
-    }
-        
-    /* Body */
-    body {
-        margin: 0;  
-        padding: 0;
-        background-color: var(--background-color);
-        font-family: var(--body-font);
-        color: var(--info-text);
-    }
+html {        
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+    
+/* Body */
+body {
+    margin: 0;  
+    padding: 0;
+    background-color: var(--background-color);
+    font-family: var(--body-font);
+    color: var(--info-text);
+}
 
-    /* Header Section - identisk med index.css */
-    header {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 100px;
-    }
+/* Header Section - identisk med index.css */
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+}
 
-    .logo {
-        height: 50;
-    }
+.logo {
+    height: 50;
+}
 
-    .navbar {
-        display: flex;
-        align-items: center;
-    }
+.navbar {
+    display: flex;
+    align-items: center;
+}
 
-    .nav-list {
-        display: flex;
-        list-style: none;
-    }
+.nav-list {
+    display: flex;
+    list-style: none;
+}
 
-    .nav-list li {
-        margin: 0 15px;
-    }
+.nav-list li {
+    margin: 0 15px;
+}
 
-    .nav-list li a {
-        text-decoration: none;
-        color: var(--primary-green);
-        font-family: var(--body-font);
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        transition: color 0.3s;
-    }
+.nav-list li a {
+    text-decoration: none;
+    color: var(--primary-green);
+    font-family: var(--body-font);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transition: color 0.3s;
+}
 
-    .nav-list li a:hover {
-        color: #97BC2E;
-    }
+.nav-list li a:hover {
+    color: #97BC2E;
+}
 
-    header::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 5%;
-        width: 90%;
-        height: 2px;
-        background-color: #BDDD60;
-    }
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    height: 2px;
+    background-color: #BDDD60;
+}
 
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    min-width: 100px;  
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 12px;
+    padding: 8px 0;
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+.dropdown::after {
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    bottom: -10px;
+    left: 0;
+    background-color: transparent;
+}
+
+.dropdown-content li {
+    margin: 0;
+    display: block;
+}
+
+.dropdown-content li a {
+    color: var(--primary-green);
+    padding: 10px 15px;
+    display: block;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f5f5f5;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 /* Main Content */
 main {
     padding: 50px 100px;

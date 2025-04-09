@@ -11,21 +11,35 @@
 
 <body>
 <!--HEADER-->
-    <header>
-        <a href="/"> <!-- REFRESH BUTTON PÅ LOGOEN/BYTT UT MED JS KODE SENERE-->
-            <img class="logo" src="images/rootlogo.svg" alt="root. logo">
-        </a>
-        <nav class="navbar">
-            <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="toolkit.html">Toolkit</a></li>
-                <li><a href="">Case Studies</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <a href="/">
+        <img class="logo" src="images/rootlogo.svg" alt="root. logo">
+    </a>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="about.html">About</a>
+                <ul class="dropdown-content">
+                    <li><a href="about.html#team">Our Team</a></li>
+                    <li><a href="about.html#mission">Our Mission</a></li>
+                    <li><a href="about.html#values">Our Values</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="toolkit.html">Toolkit</a>
+                <ul class="dropdown-content">
+                    <li><a href="toolkit.html#resources">Resources</a></li>
+                    <li><a href="toolkit.html#guides">Guides</a></li>
+                    <li><a href="toolkit.html#templates">Templates</a></li>
+                </ul>
+            </li>
+            <li><a href="">Case Studies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+</header>
     
     <main>
         <section class="about-section">
