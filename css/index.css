@@ -370,7 +370,7 @@ footer {
     text-align: left; 
 }
 
-/* Social links with Font Awesome icons */
+
 .social-links ul {
     display: flex;
     list-style: none;
@@ -379,16 +379,16 @@ footer {
 }
 
 .social-links a {
-    color: var(--footer-text); /* Match your footer text color */
-    font-size: 22px; /* Adjust size as needed */
+    color: var(--footer-text); 
+    font-size: 22px; 
     transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #D7F0BE; /* Light green color for hover effect */
+    color: #D7F0BE; 
 }
 
-/* If you want to add circles around icons */
+
 .social-links a {
     display: flex;
     justify-content: center;
@@ -400,7 +400,7 @@ footer {
 }
 
 .social-links a:hover {
-    background-color: rgba(215, 240, 190, 0.1); /* Subtle hover background */
+    background-color: rgba(215, 240, 190, 0.1); 
     border-color: #D7F0BE;
 }
 
