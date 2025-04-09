@@ -370,21 +370,38 @@ footer {
     text-align: left; 
 }
 
-.social-links {
-    margin-top: 10px;
-    align-self: flex-start; 
-}
-
+/* Social links with Font Awesome icons */
 .social-links ul {
     display: flex;
     list-style: none;
-    gap: 15px;
-    padding-left: 0; 
+    gap: 20px;
+    padding-left: 0;
 }
 
-.social-links img {
-    height: 24px;
-    color: var(--footer-text);
+.social-links a {
+    color: var(--footer-text); /* Match your footer text color */
+    font-size: 22px; /* Adjust size as needed */
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #D7F0BE; /* Light green color for hover effect */
+}
+
+/* If you want to add circles around icons */
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--footer-text);
+}
+
+.social-links a:hover {
+    background-color: rgba(215, 240, 190, 0.1); /* Subtle hover background */
+    border-color: #D7F0BE;
 }
 
 .footer-nav {
