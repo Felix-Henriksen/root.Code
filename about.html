@@ -3,34 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Green Coding</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="img/png" href="images/favicon.png">
+    <title>The root. Project</title>
     <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-    <!--HEADER-->
-        <header>
-            <a href="/"> <!-- REFRESH BUTTON PÅ LOGOEN/BYTT UT MED JS KODE SENERE-->
-                <img class="logo" src="images/rootlogo.svg" alt="root. logo">
-            </a>
-            <nav class="navbar">
-                <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="toolkit.html">Toolkit</a></li>
-                    <li><a href="">Case Studies</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <button class="search-button" aria-label="search"> 
-                    <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="26.5" cy="26.5" r="26.5" fill="#D7E6A9"/>
-                        <path d="M29 32L35 39" stroke="#006D69" stroke-width="2"/>
-                        <circle cx="25.5" cy="26.5" r="6.5" fill="#D7E6A9" stroke="#006D69" stroke-width="2"/>
-                    </svg>
-                </button>
-            </nav>
-        </header>
+<!--HEADER-->
+    <header>
+        <a href="/"> <!-- REFRESH BUTTON PÅ LOGOEN/BYTT UT MED JS KODE SENERE-->
+            <img class="logo" src="images/rootlogo.svg" alt="root. logo">
+        </a>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="toolkit.html">Toolkit</a></li>
+                <li><a href="">Case Studies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <button class="search-button" aria-label="search"> 
+                <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="26.5" cy="26.5" r="26.5" fill="#D7E6A9"/>
+                    <path d="M29 32L35 39" stroke="#006D69" stroke-width="2"/>
+                    <circle cx="25.5" cy="26.5" r="6.5" fill="#D7E6A9" stroke="#006D69" stroke-width="2"/>
+                </svg>
+            </button>
+        </nav>
+    </header>
     
     <main>
         <section class="about-section">
@@ -76,17 +78,71 @@
         </section>
     </main>
     
-    <footer>
-        <p>&copy; 2025 root. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="#">Terms and Privacy Policy</a>
-            <a href="#">Helpdesk</a>
+<!--FOOTER-->
+
+<footer>
+    <div class="footer-content">
+        <!-- brand section -->
+        <div class="footer-brand">
+            <img src="images/rootlogo.svg" alt="root. logo" class="footer-logo">
+            <p class="copyright-txt">Copyright © 2025 root. Project Capstone. All rights reserved.</p>
+            <div class="social-links">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Felix-Henriksen/root.Code" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
+        
+        <!-- footer navigation -->
+        <nav class="footer-nav">
+            <div class="legal">
+                <h3 class="small-title">LEGAL</h3>
+                <ul>
+                    <li><a href="/trademark">Trademark Policy</a></li>
+                    <li><a href="/privacy">Terms and Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="more">
+                <h3 class="small-title">MORE</h3>
+                <ul>
+                    <li><a href="/membership">Membership enquiries</a></li>
+                    <li><a href="/join">Join us</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- newsletter signup -->
         <div class="newsletter">
-            <p>JOIN OUR NEWSLETTER</p>
-            <input type="email" placeholder="Enter email">
-            <button>Sign up</button>
+            <h3 class="small-title">JOIN OUR NEWSLETTER</h3>
+            <form class="signup-form">
+                <div class="form-group">
+                    <input 
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                        aria-describedby="email-help"
+                    >
+                </div>
+                <button type="submit" class="signup-button">Sign up</button>
+            </form>
         </div>
-    </footer>
+    </div>
+</footer>
 </body>
-</html>
+</html> 

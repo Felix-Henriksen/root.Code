@@ -172,6 +172,7 @@ h1 {
     border-radius: 5px;
 }
 
+
 .logo-container {
     display: flex;
     justify-content: space-around;
@@ -210,6 +211,7 @@ h1 {
     text-transform: capitalize;
     margin-bottom: 20px;
 }
+
 
 .info-txt {
     color: var(--info-text);
