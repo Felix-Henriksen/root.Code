@@ -399,7 +399,7 @@ h1 {
 /* Responsive adjustments */
 @media (max-width: 992px) {
     header {
-        padding: 10px 20px;
+        padding: 10px 30px;
     }
     
     .nav-list li a {
