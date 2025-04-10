@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="img/png" href="images/favicon.png">
-    <title>The root. Project</title>
+    <title>The root. Project - About Us</title>
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -12,81 +12,88 @@
 <body>
 <!--HEADER-->
 <header>
+    <div class="menu-backdrop"></div>
     <a href="/">
         <img class="logo" src="images/rootlogo.svg" alt="root. logo">
     </a>
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     <nav class="navbar">
         <ul class="nav-list">
             <li><a href="index.html">Home</a></li>
             <li class="dropdown">
                 <a href="about.html">About</a>
                 <ul class="dropdown-content">
-                    <li><a href="about.html#team">Our Team</a></li>
-                    <li><a href="about.html#mission">Our Mission</a></li>
+                    <button class="dropdown-back-arrow" aria-label="Go back"><i class="fas fa-arrow-right"></i></button>
+                    <li><a href="about.html#vision">Our Vision</a></li>
                     <li><a href="about.html#values">Our Values</a></li>
+                    <li><a href="about.html#team">Our Team</a></li>
                 </ul>
             </li>
-            <li class="dropdown">
-                <a href="toolkit.html">Toolkit</a>
-                <ul class="dropdown-content">
-                    <li><a href="toolkit.html#resources">Resources</a></li>
-                    <li><a href="toolkit.html#guides">Guides</a></li>
-                    <li><a href="toolkit.html#templates">Templates</a></li>
-                </ul>
-            </li>
-            <li><a href="">Case Studies</a></li>
+            <li><a href="toolkit.html">Toolkit</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="blog.html">Blog</a></li>
         </ul>
     </nav>
 </header>
-    
-    <main>
-        <section class="about-section">
-            <h1>About Us</h1>
-            <p>The Green Coding initiative is encouraging a movement dedicated to transforming the software development landscape by including sustainability into every line of code. Our group's mission is to reduce the Co2 release of digital technologies by implementing lighter code that reduces the size and load of the website, and also encourage developers to switch from standard coding procedures and switch to green coding. </p>
-            <p>The demand for digital services grows rapidly, and so does the energy consumption of data centers, cloud computing and use of AI technology. There are a lot of things that need improvement to reduce the carbon emissions, like inefficient algorithms, bloated code and wasteful computing practices. By promoting green coding principles, we aim to minimize the carbon footprint of software development, while still keeping a high performance and functionality.</p>
-            <h2>Our Vision</h2>
-            <p>We strive to reduce the carbon footprint of software development by implementing efficient algorithms and eco-friendly technologies.</p>
-            <p><strong>Optimizing Energy Efficiency:</strong></p>
-            <p>We want to encourage the use of lean algorithms, low-power programming languages, and energy aware coding techniques to reduce memory usage.</p>
-            <p><strong>Reducing Digital Waste</strong></p>
-            <p>Use of clean, maintainable and minimalistic code to decrease unnecessary power consumption.</p>
-            <p><strong>Promoting Green Technologies</strong></p>
-            <p>Supporting renewable energy-powered data centers, carbon-neutral cloud services, sustainable hardware design and reduction of AI use.</p>
-            <h2>Our Team</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <h3>Mustafe Mohammed</h3>
-                    <p>Report Planner</p>
-                    <p>249204@usn.no</p>
-                </div>
-                <div class="team-member">
-                    <h3>Felix Henriksen</h3>
-                    <p>Website Developer</p>
-                    <p>274078@usn.no</p>
-                </div>
-                <div class="team-member">
-                    <h3>Arnas Zakarauskas</h3>
-                    <p>Website Developer</p>
-                    <p>274099@usn.no</p>
-                </div>
-                <div class="team-member">
-                    <h3>Emmerik Aas Sandvik</h3>
-                    <p>Project Leader</p>
-                    <p>274079@usn.no</p>
-                </div>
-                <div class="team-member">
-                    <h3>Abdulla Mohammed Mohamud</h3>
-                    <p>Test Engineer</p>
-                    <p>274073@usn.no</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-<!--FOOTER-->
 
+<main>
+    <section class="about-section">
+        <h1>About Us</h1>
+        <p>The Green Coding initiative is encouraging a movement dedicated to transforming the software development landscape by including sustainability into every line of code. Our group's mission is to reduce the Co2 release of digital technologies by implementing lighter code that reduces the size and load of the website, and also encourage developers to switch from standard coding procedures and switch to green coding.</p>
+        <p>The demand for digital services grows rapidly, and so does the energy consumption of data centers, cloud computing and use of AI technology. There are a lot of things that need improvement to reduce the carbon emissions, like inefficient algorithms, bloated code and wasteful computing practices. By promoting green coding principles, we aim to minimize the carbon footprint of software development, while still keeping a high performance and functionality.</p>
+        
+        <h2 id="vision">Our Vision</h2>
+        <p>We strive to reduce the carbon footprint of software development by implementing efficient algorithms and eco-friendly technologies.</p>
+        <p><strong>Optimizing Energy Efficiency:</strong></p>
+        <p>We want to encourage the use of lean algorithms, low-power programming languages, and energy aware coding techniques to reduce memory usage.</p>
+        <p><strong>Reducing Digital Waste</strong></p>
+        <p>Use of clean, maintainable and minimalistic code to decrease unnecessary power consumption.</p>
+        <p><strong>Promoting Green Technologies</strong></p>
+        <p>Supporting renewable energy-powered data centers, carbon-neutral cloud services, sustainable hardware design and reduction of AI use.</p>
+        
+        <h2 id="values">Our Values</h2>
+        <p>At root., we believe in sustainable development that doesn't compromise on performance. Our core values guide everything we do:</p>
+        <p><strong>Innovation:</strong> We constantly explore new ways to make software more energy-efficient.</p>
+        <p><strong>Education:</strong> We share knowledge freely to empower developers to adopt sustainable practices.</p>
+        <p><strong>Collaboration:</strong> We work together with organizations across the tech industry to create meaningful change.</p>
+        <p><strong>Measurability:</strong> We believe in evidence-based approaches and measuring the impact of our solutions.</p>
+
+        <h2 id="team">Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <h3>Mustafe Mohammed</h3>
+                <p>Report Planner</p>
+                <p>249204@usn.no</p>
+            </div>
+            <div class="team-member">
+                <h3>Felix Henriksen</h3>
+                <p>Website Developer</p>
+                <p>274078@usn.no</p>
+            </div>
+            <div class="team-member">
+                <h3>Arnas Zakarauskas</h3>
+                <p>Website Developer</p>
+                <p>274099@usn.no</p>
+            </div>
+            <div class="team-member">
+                <h3>Emmerik Aas Sandvik</h3>
+                <p>Project Leader</p>
+                <p>274079@usn.no</p>
+            </div>
+            <div class="team-member">
+                <h3>Abdulla Mohammed Mohamud</h3>
+                <p>Test Engineer</p>
+                <p>274073@usn.no</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--FOOTER-->
 <footer>
     <div class="footer-content">
         <!-- brand section -->
@@ -128,6 +135,7 @@
                 <ul>
                     <li><a href="/membership">Membership enquiries</a></li>
                     <li><a href="/join">Join us</a></li>
+                    <li><a href="/help">Helpdesk</a></li>
                 </ul>
             </div>
         </nav>
@@ -147,9 +155,11 @@
                     >
                 </div>
                 <button type="submit" class="signup-button">Sign up</button>
+                </div>
             </form>
         </div>
     </div>
 </footer>
+<script src="js/about.js"></script>
 </body>
-</html> 
+</html>

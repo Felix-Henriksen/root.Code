@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="img/png" href="images/favicon.png">
-    <title>The root. Project</title>
+    <title>The root. Project - Contact Us</title>
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -12,173 +12,171 @@
 <body>
 <!--HEADER-->
 <header>
+    <div class="menu-backdrop"></div>
     <a href="/">
         <img class="logo" src="images/rootlogo.svg" alt="root. logo">
     </a>
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     <nav class="navbar">
         <ul class="nav-list">
             <li><a href="index.html">Home</a></li>
             <li class="dropdown">
                 <a href="about.html">About</a>
                 <ul class="dropdown-content">
-                    <li><a href="about.html#team">Our Team</a></li>
-                    <li><a href="about.html#mission">Our Mission</a></li>
+                    <button class="dropdown-back-arrow" aria-label="Go back"><i class="fas fa-arrow-right"></i></button>
+                    <li><a href="about.html#vision">Our Vision</a></li>
                     <li><a href="about.html#values">Our Values</a></li>
+                    <li><a href="about.html#team">Our Team</a></li>
                 </ul>
             </li>
-            <li class="dropdown">
-                <a href="toolkit.html">Toolkit</a>
-                <ul class="dropdown-content">
-                    <li><a href="toolkit.html#resources">Resources</a></li>
-                    <li><a href="toolkit.html#guides">Guides</a></li>
-                    <li><a href="toolkit.html#templates">Templates</a></li>
-                </ul>
-            </li>
-            <li><a href="">Case Studies</a></li>
+            <li><a href="toolkit.html">Toolkit</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="blog.html">Blog</a></li>
         </ul>
     </nav>
 </header>
-    
-    <main>
-        <section class="contact-form">
-            <h1>Contact us</h1>
-            <form action="submit_form.php" method="POST">
-                <label for="first-name">Name:</label>
-                <input type="text" id="first-name" name="first-name" required>
-                
-                <label for="last-name">Last name:</label>
-                <input type="text" id="last-name" name="last-name" required>
-                
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" required>
-                
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Questions/Problems:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
 
+<!--MAIN SECTION-->
+<main>
+    <section class="contact-form">
+        <h1>Contact us</h1>
+        <form action="submit_form.php" method="POST">
+            <label for="first-name">Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+            
+            <label for="last-name">Last name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Questions/Problems:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
 
-        <!-- FAQ Section -->
-        <section class="faq-section">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-container">
-                <details class="faq-item">
-                    <summary class="faq-question">What is Green Coding?</summary>
-                    <div class="faq-answer">
-                        <p>Green Coding is the practice of writing energy-efficient, sustainable software by optimizing algorithms, reducing computational waste, and minimizing the carbon footprint of digital products.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item">
-                    <summary class="faq-question">Why does coding impact the environment?</summary>
-                    <div class="faq-answer">
-                        <p>Software runs on physical servers that consume electricity. Bloated code and inefficient algorithms increase energy use, often powered by fossil fuels.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item">
-                    <summary class="faq-question">How can developers start practicing Green Coding?</summary>
-                    <div class="faq-answer">
-                        <ul>
-                            <li>Optimize code and remove redundant computations</li>
-                            <li>Reduce data transfer by minimizing file sizes</li>
-                            <li>Choose eco-friendly hosting with renewable energy</li>
-                            <li>Use tools like Website Carbon Calculator</li>
-                        </ul>
-                    </div>
-                </details>
-                
-                <details class="faq-item">
-                    <summary class="faq-question">Does Green Coding sacrifice performance?</summary>
-                    <div class="faq-answer">
-                        <p>No! Efficient code often improves performance by reducing load times and CPU usage through techniques like caching and lazy loading.</p>
-                    </div>
-                </details>
-                
-                <details class="faq-item">
-                    <summary class="faq-question">How do I measure my software's carbon footprint?</summary>
-                    <div class="faq-answer">
-                        <p>Use tools like Scaphandre (energy monitoring) or Ecograder (website audit) to analyze your environmental impact.</p>
-                    </div>
-                </details>
-            </div>
-        </section>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <details class="faq-item">
+                <summary class="faq-question">What is Green Coding?</summary>
+                <div class="faq-answer">
+                    <p>Green Coding is the practice of writing energy-efficient, sustainable software by optimizing algorithms, reducing computational waste, and minimizing the carbon footprint of digital products.</p>
+                </div>
+            </details>
+            
+            <details class="faq-item">
+                <summary class="faq-question">Why does coding impact the environment?</summary>
+                <div class="faq-answer">
+                    <p>Software runs on physical servers that consume electricity. Bloated code and inefficient algorithms increase energy use, often powered by fossil fuels.</p>
+                </div>
+            </details>
+            
+            <details class="faq-item">
+                <summary class="faq-question">How can developers start practicing Green Coding?</summary>
+                <div class="faq-answer">
+                    <ul>
+                        <li>Optimize code and remove redundant computations</li>
+                        <li>Reduce data transfer by minimizing file sizes</li>
+                        <li>Choose eco-friendly hosting with renewable energy</li>
+                        <li>Use tools like Website Carbon Calculator</li>
+                    </ul>
+                </div>
+            </details>
+            
+            <details class="faq-item">
+                <summary class="faq-question">Does Green Coding sacrifice performance?</summary>
+                <div class="faq-answer">
+                    <p>No! Efficient code often improves performance by reducing load times and CPU usage through techniques like caching and lazy loading.</p>
+                </div>
+            </details>
+            
+            <details class="faq-item">
+                <summary class="faq-question">How do I measure my software's carbon footprint?</summary>
+                <div class="faq-answer">
+                    <p>Use tools like Scaphandre (energy monitoring) or Ecograder (website audit) to analyze your environmental impact.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+</main>
 
-
-        
 <!--FOOTER-->
-
-    <footer>
-        <div class="footer-content">
-            <!-- brand section -->
-            <div class="footer-brand">
-                <img src="images/rootlogo.svg" alt="root. logo" class="footer-logo">
-                <p class="copyright-txt">Copyright © 2025 root. Project Capstone. All rights reserved.</p>
-                <div class="social-links">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/Felix-Henriksen/root.Code" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-x-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- footer navigation -->
-            <nav class="footer-nav">
-                <div class="legal">
-                    <h3 class="small-title">LEGAL</h3>
-                    <ul>
-                        <li><a href="/trademark">Trademark Policy</a></li>
-                        <li><a href="/privacy">Terms and Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="more">
-                    <h3 class="small-title">MORE</h3>
-                    <ul>
-                        <li><a href="/membership">Membership enquiries</a></li>
-                        <li><a href="/join">Join us</a></li>
-                    </ul>
-                </div>
-            </nav>
-            
-            <!-- newsletter signup -->
-            <div class="newsletter">
-                <h3 class="small-title">JOIN OUR NEWSLETTER</h3>
-                <form class="signup-form">
-                    <div class="form-group">
-                        <input 
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="you@example.com"
-                            required
-                            aria-describedby="email-help"
-                        >
-                    </div>
-                    <button type="submit" class="signup-button">Sign up</button>
-                </form>
+<footer>
+    <div class="footer-content">
+        <!-- brand section -->
+        <div class="footer-brand">
+            <img src="images/rootlogo.svg" alt="root. logo" class="footer-logo">
+            <p class="copyright-txt">Copyright © 2025 root. Project Capstone. All rights reserved.</p>
+            <div class="social-links">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Felix-Henriksen/root.Code" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </footer>
+        
+        <!-- footer navigation -->
+        <nav class="footer-nav">
+            <div class="legal">
+                <h3 class="small-title">LEGAL</h3>
+                <ul>
+                    <li><a href="/trademark">Trademark Policy</a></li>
+                    <li><a href="/privacy">Terms and Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="more">
+                <h3 class="small-title">MORE</h3>
+                <ul>
+                    <li><a href="/membership">Membership enquiries</a></li>
+                    <li><a href="/join">Join us</a></li>
+                    <li><a href="/help">Helpdesk</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- newsletter signup -->
+        <div class="newsletter">
+            <h3 class="small-title">JOIN OUR NEWSLETTER</h3>
+            <form class="signup-form">
+                <div class="form-group">
+                    <input 
+                        type="email"
+                        id="newsletter-email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                        aria-describedby="email-help"
+                    >
+                </div>
+                <button type="submit" class="signup-button">Sign up</button>
+            </form>
+        </div>
+    </div>
+</footer>
+<script src="js/contact.js"></script>
 </body>
-</html> 
+</html>

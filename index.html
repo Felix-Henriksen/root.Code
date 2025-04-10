@@ -11,36 +11,35 @@
 
 <body>
 <!--HEADER-->
-<header>
-    <a href="/">
-        <img class="logo" src="images/rootlogo.svg" alt="root. logo">
-    </a>
-    <nav class="navbar">
-        <ul class="nav-list">
-            <li><a href="index.html">Home</a></li>
-            <li class="dropdown">
-                <a href="about.html">About</a>
-                <ul class="dropdown-content">
-                    <li><a href="about.html#team">Our Team</a></li>
-                    <li><a href="about.html#mission">Our Mission</a></li>
-                    <li><a href="about.html#values">Our Values</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="toolkit.html">Toolkit</a>
-                <ul class="dropdown-content">
-                    <li><a href="toolkit.html#resources">Resources</a></li>
-                    <li><a href="toolkit.html#guides">Guides</a></li>
-                    <li><a href="toolkit.html#templates">Templates</a></li>
-                </ul>
-            </li>
-            <li><a href="">Case Studies</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="blog.html">Blog</a></li>
-        </ul>
-    </nav>
-</header>
-<!--MAIN CONTENT-->
+    <header>
+        <div class="menu-backdrop"></div>
+        <a href="/">
+            <img class="logo" src="images/rootlogo.svg" alt="root. logo">
+        </a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="about.html">About</a>
+                    <ul class="dropdown-content">
+                        <button class="dropdown-back-arrow" aria-label="Go back"><i class="fas fa-arrow-right"></i></button>
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="about.html#mission">Our Mission</a></li>
+                        <li><a href="about.html#values">Our Values</a></li>
+                    </ul>
+                </li>
+                <li><a href="toolkit.html">Toolkit</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<!--MAIN SECTION-->
     <main>
         <!--hero section-->
         <section class="hero-section fade-in">
@@ -114,8 +113,8 @@
                 <p class="info-txt">Our mission is to inspire and equip developers with the knowledge and tools to build sustainable software. By fostering eco-friendly coding practices, we strive to drive positive environmental change in the tech industry.</p>
             </article>
         </section>
-    </main>
-<!--member section-->
+
+        <!--member section-->
         <section class="member-section">
             <h2 class="small-title">OUR MEMBER ORGANIZATIONS</h2>
             <ul class="member-logos">
@@ -195,5 +194,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/index.js"></script>
 </body>
-</html> 
+</html>
