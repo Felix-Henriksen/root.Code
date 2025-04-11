@@ -223,6 +223,20 @@ header::after {
     line-height: 1.6;
 }
 
+/* Layout for top 3-card row */
+.top-row-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* Full-width divider section */
+.divider-section {
+    margin-bottom: 40px;
+}
+
+/* Blog grid for bottom cards */
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -237,6 +251,19 @@ header::after {
     transition: transform 0.35s ease, box-shadow 0.35s ease;
     border: 1px solid #e4e4e4;
     position: relative;
+}
+
+/* Full-width card for Key Strategies */
+.blog-card.full-width {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+/* Grid for strategies within the Key Strategies card */
+.strategies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
 .blog-card:hover {
@@ -302,6 +329,44 @@ header::after {
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
     display: block;
+}
+
+/* Styles for the results table */
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.results-table th, 
+.results-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.results-table th {
+    background-color: #f9f9f9;
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+.stat-note {
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 15px;
+    color: #555;
+}
+
+/* Steps list styling */
+.steps-list {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.steps-list li {
+    margin-bottom: 12px;
+    line-height: 1.5;
 }
 
 .icon-background {
@@ -540,6 +605,14 @@ footer {
     .nav-list li {
         margin: 0 10px;
     }
+    
+    .top-row-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .top-row-grid > .blog-card:last-child {
+        grid-column: 1 / -1;
+    }
 }
 
 @media (max-width: 768px) {
@@ -664,6 +737,10 @@ footer {
     
     /* Blog grid adjustments */
     .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .top-row-grid {
         grid-template-columns: 1fr;
     }
     
