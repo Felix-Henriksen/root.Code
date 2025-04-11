@@ -35,7 +35,14 @@
             </li>
             <li><a href="toolkit.html">Toolkit</a></li>
             <li><a href="case-studies.html">Case Studies</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li class="dropdown">
+                <a href="contact.html">Contact</a>
+                <ul class="dropdown-content">
+                    <button class="dropdown-back-arrow" aria-label="Go back"><i class="fas fa-arrow-right"></i></button>
+                    <li><a href="contact.html">Contact Form</a></li>
+                    <li><a href="contact.html#faq-section">FAQ</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 </header>
@@ -65,7 +72,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq-section">
+    <section class="faq-section" id="faq-section">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-container">
             <details class="faq-item" id="faq-green-coding">

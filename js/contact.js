@@ -86,4 +86,60 @@ document.addEventListener('DOMContentLoaded', function() {
             element.setAttribute('open', '');
         }
     }
+
+    // Create popup message element
+    const createPopup = () => {
+        const popup = document.createElement('div');
+        popup.className = 'confirmation-popup';
+        popup.innerHTML = `
+            <div class="popup-content">
+                <i class="fas fa-check-circle"></i>
+                <h3>Thank You!</h3>
+                <p>We have received your message and will get back to you soon.</p>
+                <button class="close-popup">Close</button>
+            </div>
+        `;
+        return popup;
+    };
+
+    // Handle form submission
+    const contactForm = document.querySelector('.contact-form form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the default form submission
+            
+            // Check form validity
+            if (this.checkValidity()) {
+                // Create and append the popup
+                const popup = createPopup();
+                document.body.appendChild(popup);
+                
+                // Add class to trigger animation
+                setTimeout(() => {
+                    popup.classList.add('active');
+                }, 10);
+                
+                // Add event listener to close button
+                popup.querySelector('.close-popup').addEventListener('click', function() {
+                    popup.classList.remove('active');
+                    // Remove popup from DOM after fade-out animation
+                    setTimeout(() => {
+                        popup.remove();
+                    }, 300);
+                });
+                
+                // Reset the form
+                this.reset();
+                
+                // In a real application, you would submit the form data to the server here
+                // For example: 
+                // fetch('submit_form.php', {
+                //     method: 'POST',
+                //     body: new FormData(this)
+                // })
+                // .then(response => response.json())
+                // .then(data => console.log(data));
+            }
+        });
+    }
 });
