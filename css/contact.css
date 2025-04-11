@@ -210,7 +210,7 @@ main {
 .contact-form textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #ddd;
+    border: 1px solid #515151;
     border-radius: 4px;
     font-family: var(--body-font);
     transition: border-color 0.3s, box-shadow 0.3s;
