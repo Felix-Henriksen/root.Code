@@ -76,4 +76,14 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = '';
         }
     });
+
+    if (window.location.hash) {
+        // Get the element with that ID
+        const element = document.querySelector(window.location.hash);
+        
+        // If it's a details element, open it
+        if (element && element.tagName === 'DETAILS') {
+            element.setAttribute('open', '');
+        }
+    }
 });
