@@ -62,7 +62,6 @@ img {
     height: auto;
 }
 
-/* Header Section - match with index.css */
 header {
     position: relative;
     display: flex;
@@ -73,9 +72,25 @@ header {
     margin: 0 auto;
 }
 
+/* Logo wrapper styles */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
 .logo {
-    height: 50px;
+    height: clamp(35px, 5vw, 50px); 
     width: auto;
+}
+
+.logo-text {
+    color: var(--primary-green);
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: clamp(20px, 3vw, 28px); 
+    margin-left: -2px; 
+    position: relative;
 }
 
 .navbar {
@@ -333,7 +348,6 @@ main {
     transform: translateY(0);
 }
 
-/* Animation for the check icon */
 @keyframes checkmark {
     0% {
         transform: scale(0);
@@ -361,7 +375,7 @@ main {
     border-radius: 8px;
     box-shadow: 
         0 4px 12px rgba(0, 0, 0, 0.1),
-        0 0 0 1px rgba(0, 109, 105, 0.05); /* subtle border */
+        0 0 0 1px rgba(0, 109, 105, 0.05); 
 }
 
 .faq-section h2 {
@@ -445,7 +459,7 @@ main {
 }
 
 .faq-item[open] .faq-answer {
-    max-height: 300px; /* Adjust based on your longest content */
+    max-height: 300px; 
     padding: 0 1rem 1rem;
     animation: fadeIn 0.5s ease-out;
 }
@@ -691,10 +705,10 @@ footer {
 }
 
 .dropdown-back-arrow {
-    display: none; /* Hidden by default for desktop */
+    display: none; 
 }
 
-/* Media Queries */
+/* Scaling */
 @media (max-width: 992px) {
     .footer-content {
         grid-template-columns: 1fr 1fr;
@@ -727,6 +741,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+    /* hide logo text in mobile */
+    .logo-text {
+        display: none;
+    }
+    
     header {
         z-index: 1000;
         background-color: var(--background-color);
@@ -774,7 +793,6 @@ footer {
         text-align: center;
     }
 
-    /* Update dropdown content for side sliding */
     .dropdown-content {
         position: fixed;
         top: 0;
@@ -792,7 +810,6 @@ footer {
         transform: translateX(30px);
     }
 
-    /* Enhanced animation when shown */
     .dropdown-content.show {
         right: 0;
         opacity: 1;
@@ -800,7 +817,6 @@ footer {
         transform: translateX(0);
     }
     
-    /* New style for back arrow button */
     .dropdown-back-arrow {
         display: block;
         position: absolute;
@@ -814,7 +830,6 @@ footer {
         padding: 5px 10px;
     }
     
-    /* Update dropdown link styles */
     .dropdown-content li a {
         padding: 15px 20px;
         text-align: center;
@@ -822,7 +837,6 @@ footer {
         font-size: 18px;
     }
 
-    /* New style for dropdown arrows */
     .dropdown > a::before {
         content: '‹';
         display: inline-block;
@@ -830,7 +844,6 @@ footer {
         font-size: 20px;
     }
 
-    /* Center dropdown content items */
     .dropdown-content li {
         text-align: center;
         width: 100%;

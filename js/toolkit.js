@@ -12,6 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.toggle('active');
             navbar.classList.toggle('active');
             backdrop.classList.toggle('active');
+            
+            // If a dropdown is open when closing hamburger menu, close it
+            if (!isMenuOpen) {
+                document.querySelectorAll('.dropdown-content.show').forEach(dropdown => {
+                    dropdown.classList.remove('show');
+                });
+                navbar.classList.remove('dropdown-open');
+            }
+            
             document.body.style.overflow = isMenuOpen ? 'hidden' : '';
         });
     }
@@ -28,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.querySelectorAll('.dropdown-content.show').forEach(dropdown => {
                     dropdown.classList.remove('show');
                 });
+                navbar.classList.remove('dropdown-open');
                 
                 isMenuOpen = false;
                 document.body.style.overflow = '';
@@ -47,15 +57,21 @@ document.addEventListener('DOMContentLoaded', function() {
             dropdownLink.addEventListener('click', function(e) {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
+                    
+                    // Apply slide-in effect
                     dropdownContent.classList.add('show');
+                    
+                    // Add class to navbar to adjust position
+                    navbar.classList.add('dropdown-open');
                 }
             });
         }
         
         if (backArrow) {
             backArrow.addEventListener('click', function(e) {
-                e.preventDefault(); // Add this to prevent default action
+                e.preventDefault();
                 dropdownContent.classList.remove('show');
+                navbar.classList.remove('dropdown-open');
             });
         }
     });
@@ -64,7 +80,10 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', function() {
         if (window.innerWidth > 768) {
             if (hamburger) hamburger.classList.remove('active');
-            if (navbar) navbar.classList.remove('active');
+            if (navbar) {
+                navbar.classList.remove('active');
+                navbar.classList.remove('dropdown-open');
+            }
             if (backdrop) backdrop.classList.remove('active');
             
             // Hide all mobile dropdowns

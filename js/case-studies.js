@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (backArrow) {
             backArrow.addEventListener('click', function(e) {
-                e.preventDefault(); // Add this to prevent default action
+                e.preventDefault(); 
                 dropdownContent.classList.remove('show');
             });
         }

@@ -10,7 +10,7 @@
 }
 
 /* variables */
-:root {
+:root { 
     /* colors */
     --primary-green: #006D69;
     --secondary-green: #D7F0BE;
@@ -54,6 +54,7 @@ body {
     padding: 0;
     background-color: var(--background-color);
     overflow-x: hidden;
+    width: 100%;
 }
 
 img {
@@ -70,11 +71,28 @@ header {
     padding: 10px 5%;
     max-width: 1440px;
     margin: 0 auto;
+    width: 100%;
+}
+
+/* Logo wrapper stiler */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .logo {
-    height: 50px;
+    height: clamp(35px, 5vw, 50px); 
     width: auto;
+}
+
+.logo-text {
+    color: var(--primary-green);
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: clamp(20px, 3vw, 28px); 
+    margin-left: -2px; 
+    position: relative;
 }
 
 .navbar {
@@ -95,7 +113,7 @@ header {
     text-decoration: none;
     color: var(--primary-green);
     font-family: var(--body-font);
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -155,7 +173,7 @@ header::after {
     color: var(--primary-green);
     padding: 10px 15px;
     display: block;
-    font-size: 16px;
+    font-size: clamp(14px, 1.6vw, 16px);
     white-space: nowrap;
 }
 
@@ -167,11 +185,11 @@ header::after {
     display: block;
 }
 
-/* Content wrapper */
 .content-wrapper {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 5%;
+    width: 100%;
 }
 
 /* hero section */
@@ -179,9 +197,10 @@ header::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 5%;
+    padding: clamp(30px, 5vw, 50px) 5%;
     max-width: 1440px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .hero-content {
@@ -204,20 +223,20 @@ header::after {
 h1 {
     color: var(--primary-green);
     font-family: var(--heading-font);
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: clamp(2rem, 5vw, 4.5rem);
     font-weight: 700;
     line-height: 1.1;
     text-transform: capitalize;
-    margin-bottom: 1.5rem;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
 }
 
 .tagline {
     color: var(--primary-green);
     font-family: var(--body-font);
-    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: 400;
     line-height: 1.4;
-    margin-bottom: 2.5rem;
+    margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 .get-started.button {
@@ -225,10 +244,11 @@ h1 {
     background-color: #006d69;
     color: white;
     font-family: var(--heading-font);
-    padding: 15px 30px;
+    padding: clamp(10px, 1.5vw, 15px) clamp(20px, 3vw, 30px);
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    font-size: clamp(14px, 1.8vw, 16px);
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.51);
 }
@@ -244,28 +264,30 @@ h1 {
 
 /* featured section */
 .featured-section {
-    padding: 50px 5%;
+    padding: clamp(30px, 5vw, 50px) 5%;
     text-align: left;
     max-width: 1440px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .small-title {
     color: var(--primary-green);
     font-family: var(--body-font);
-    font-size: clamp(0.9rem, 1.5vw, 1.5rem);
+    font-size: clamp(0.8rem, 1.5vw, 1.5rem);
     font-style: normal;
     font-weight: 600;
     line-height: 1.2;
-    letter-spacing: 4.8px;
-    margin-bottom: 20px;
+    letter-spacing: clamp(2px, 0.3vw, 4.8px);
+    margin-bottom: clamp(15px, 2vw, 20px);
     text-transform: uppercase;
 }
 
 .featured-logos {
     background-color: #D7F0BE;
-    padding: 30px;
+    padding: clamp(20px, 3vw, 30px);
     border-radius: 5px;
+    width: 100%;
 }
 
 .logo-container {
@@ -273,34 +295,36 @@ h1 {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: clamp(15px, 2vw, 20px);
+    width: 100%;
 }
 
 .logo-container img {
-    height: 40px;
-    margin: 0 20px;
+    height: clamp(30px, 4vw, 40px);
+    margin: 0 clamp(10px, 2vw, 20px);
 }
 
-/* sections with common styles */
 .greencode-section,
 .mission-section,
 .member-section {
-    padding: 80px 5%;
+    padding: clamp(40px, 8vw, 80px) 5%;
     text-align: center;
     max-width: 1440px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .greencode-content,
 .mission-content {
     max-width: 800px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .greencode-icon img,
 .mission-icon img {
-    height: 100px;
-    margin-bottom: 20px;
+    height: clamp(70px, 10vw, 100px);
+    margin-bottom: clamp(15px, 2vw, 20px);
     max-width: 100%;
 }
 
@@ -309,23 +333,23 @@ h1 {
     color: var(--primary-green);
     text-align: center;
     font-family: var(--heading-font);
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
     font-style: normal;
     font-weight: 700;
     line-height: 1.1;
     text-transform: capitalize;
-    margin-bottom: 20px;
+    margin-bottom: clamp(15px, 2vw, 20px);
 }
 
 .info-txt {
     color: var(--info-text);
     text-align: center;
     font-family: var(--body-font);
-    font-size: clamp(1.1rem, 2.5vw, 2.25rem);
+    font-size: clamp(1rem, 2.5vw, 2.25rem);
     font-style: normal;
     font-weight: 400;
     line-height: 1.4;
-    margin-bottom: 30px;
+    margin-bottom: clamp(20px, 3vw, 30px);
 }
 
 .read-definition {
@@ -333,10 +357,11 @@ h1 {
     background-color: var(--primary-green);
     color: white;
     font-family: var(--heading-font);
-    padding: 15px 30px;
+    padding: clamp(10px, 1.5vw, 15px) clamp(20px, 3vw, 30px);
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    font-size: clamp(14px, 1.8vw, 16px);
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.51);
 }
@@ -354,13 +379,14 @@ h1 {
 .member-logos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px 20px;
+    gap: clamp(20px, 3vw, 30px) clamp(15px, 2vw, 20px);
     list-style: none;
-    padding: 30px;
-    margin-top: 30px;
+    padding: clamp(20px, 3vw, 30px);
+    margin-top: clamp(20px, 3vw, 30px);
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
 }
 
 .member-logos li {
@@ -370,11 +396,11 @@ h1 {
 }
 
 .member-logos img {
-    height: 50px;
+    height: clamp(35px, 5vw, 50px);
     max-width: 100%;
 }
 
-/* Fade-in animation */
+/* Fade-in animasjon */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -386,7 +412,6 @@ h1 {
     }
 }
 
-/* Apply fade-in animation */
 .fade-in {
     animation: fadeIn 0.6s ease-out forwards;
 }
@@ -399,15 +424,17 @@ footer {
         var(--primary-green) 
     );
     color: var(--footer-text);
-    padding: 50px 5%;
+    padding: clamp(30px, 5vw, 50px) 5%;
+    width: 100%;
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    gap: 30px;
+    gap: clamp(20px, 3vw, 30px);
     max-width: 1440px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .footer-brand {
@@ -419,7 +446,7 @@ footer {
 }
 
 .footer-logo {
-    height: 60px;
+    height: clamp(45px, 6vw, 60px);
     width: auto;
     filter: brightness(0) saturate(100%) invert(78%) sepia(95%) saturate(2800%) hue-rotate(84.5deg) brightness(99%) contrast(98%);
     align-self: flex-start;
@@ -429,16 +456,16 @@ footer {
 }
 
 .copyright-txt {
-    font-size: 15px;
+    font-size: clamp(12px, 1.5vw, 15px);
     font-family: var(--body-font);
-    margin-bottom: 15px;
+    margin-bottom: clamp(10px, 1.5vw, 15px);
     text-align: left; 
 }
 
 .social-links ul {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: clamp(15px, 2vw, 20px);
     padding-left: 0;
     flex-wrap: wrap;
 }
@@ -447,12 +474,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: clamp(32px, 4vw, 40px);
+    height: clamp(32px, 4vw, 40px);
     border-radius: 50%;
     border: 1px solid var(--footer-text);
     color: var(--footer-text); 
-    font-size: 22px; 
+    font-size: clamp(16px, 2.2vw, 22px); 
     transition: all 0.3s ease;
 }
 
@@ -469,22 +496,22 @@ footer {
 }
 
 .legal, .more {
-    margin-right: 40px;
+    margin-right: clamp(20px, 4vw, 40px);
     text-align: left;
 }
 
 .footer-nav h3 {
     color: var(--footer-text);
-    margin-bottom: 15px;
+    margin-bottom: clamp(10px, 1.5vw, 15px);
 }
 
 .footer-nav h3.small-title, 
 .newsletter h3.small-title {
     font-family: var(--body-font);
-    font-size: 11px;
+    font-size: clamp(9px, 1.1vw, 11px);
     font-weight: 600;
     line-height: 120%;
-    letter-spacing: 4.8px;
+    letter-spacing: clamp(3px, 0.48vw, 4.8px);
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
@@ -522,7 +549,7 @@ footer {
     color: var(--footer-text);
     font-family: var(--body-font);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 0.9vw, 0.9rem);
     line-height: 1.8;
     transition: color 0.3s ease;
 }
@@ -539,30 +566,32 @@ footer {
 
 .newsletter h3 {
     color: var(--footer-text);
-    margin-bottom: 15px;
+    margin-bottom: clamp(10px, 1.5vw, 15px);
 }
 
 .signup-form .form-group {
-    margin-bottom: 10px;
+    margin-bottom: clamp(8px, 1vw, 10px);
 }
 
 .signup-form input {
     width: 100%;
-    padding: 10px;
+    padding: clamp(8px, 1vw, 10px);
     border-radius: 4px;
     border: none;
     font-family: var(--body-font);
+    font-size: clamp(14px, 1.6vw, 16px);
 }
 
 .signup-button {
     background-color: #D7F0BE;
     color: var(--primary-green);
     font-family: var(--heading-font);
-    padding: 10px 20px;
+    padding: clamp(8px, 1vw, 10px) clamp(15px, 2vw, 20px);
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
+    font-size: clamp(14px, 1.6vw, 16px);
     transition: all 0.3s ease;
 }
 
@@ -582,7 +611,7 @@ footer {
 
 .hamburger span {
     display: block;
-    width: 30px;
+    width: clamp(25px, 3vw, 30px);
     height: 3px;
     background-color: var(--primary-green);
     margin: 6px 0;
@@ -603,10 +632,10 @@ footer {
 }
 
 .dropdown-back-arrow {
-    display: none; /* Hidden by default for desktop */
+    display: none; 
 }
 
-/* Media Queries */
+/* scaling for forskjellige skjermer */
 @media (max-width: 992px) {
     .footer-content {
         grid-template-columns: 1fr 1fr;
@@ -626,15 +655,20 @@ footer {
     }
 
     .nav-list li a {
-        font-size: 18px;
+        font-size: clamp(16px, 1.8vw, 18px);
     }
     
     .nav-list li {
-        margin: 0 10px;
+        margin: 0 clamp(8px, 1vw, 10px);
     }
 }
 
 @media (max-width: 768px) {
+    /* gjem logo text i mobil */
+    .logo-text {
+        display: none;
+    }
+    
     header {
         z-index: 1000;
         background-color: var(--background-color);
@@ -654,7 +688,7 @@ footer {
 
     .hamburger span {
         display: block;
-        width: 30px;
+        width: clamp(25px, 3vw, 30px);
         height: 3px;
         background-color: var(--primary-green);
         margin: 6px 0;
@@ -692,7 +726,7 @@ footer {
 
     .nav-list {
         flex-direction: column;
-        align-items: center; /* Center align items */
+        align-items: center; 
         width: 100%;
         padding-top: 20px;
     }
@@ -700,42 +734,39 @@ footer {
     .nav-list li {
         margin: 15px 0;
         width: 100%;
-        text-align: center; /* Center align text */
+        text-align: center; 
     }
 
-    /* Update dropdown content for side sliding - replace your existing dropdown-content styles */
     .dropdown-content {
         position: fixed;
         top: 0;
-        right: -100%; /* Start off-screen to the right */
-        width: 70%; /* Match width of the main navbar */
+        right: -100%; 
+        width: 70%; 
         height: 100vh;
         background-color: var(--background-color);
-        z-index: 999; /* Same as navbar */
-        transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1); /* Smoother easing function */
+        z-index: 999;
+        transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1); 
         display: block;
         opacity: 0;
         pointer-events: none;
-        padding-top: 70px; /* Same as navbar */
+        padding-top: 70px; 
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-        transform: translateX(30px); /* Start slightly further right */
+        transform: translateX(30px); 
     }
 
-   /* Enhanced animation when shown */
    .dropdown-content.show {
     right: 0;
     opacity: 1;
     pointer-events: auto;
-    transform: translateX(0); /* End at natural position */
+    transform: translateX(0); 
     }
     
-   /* New style for back arrow button */
    .dropdown-back-arrow {
         display: block;
         position: absolute;
         top: 20px;
-        left: 20px; /* Position on left side */
-        font-size: 24px;
+        left: 20px; 
+        font-size: clamp(20px, 2.4vw, 24px);
         color: var(--primary-green);
         background: none;
         border: none;
@@ -747,23 +778,20 @@ footer {
         margin-right: 8px;
     }
     
-     /* Update dropdown link styles */
     .dropdown-content li a {
         padding: 15px 20px;
-        text-align: center; /* Center align text */
+        text-align: center; 
         display: block;
-        font-size: 18px;
+        font-size: clamp(16px, 1.8vw, 18px);
     }
 
-    /* New style for dropdown arrows */
     .dropdown > a::before {
-        content: '‹'; /* Left-pointing arrow character */
+        content: '‹'; 
         display: inline-block;
-        margin-right: 10px; /* Space between arrow and text */
-        font-size: 20px;
+        margin-right: 10px; 
+        font-size: clamp(18px, 2vw, 20px);
     }
 
-     /* Center dropdown content items */
     .dropdown-content li {
         text-align: center;
         width: 100%;
@@ -776,10 +804,10 @@ footer {
     .hero-content {
         max-width: 100%;
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: clamp(20px, 3vw, 30px);
     }
     
-    .logo-container {
+    .featured-logos .logo-container {
         flex-direction: column;
     }
     
@@ -788,7 +816,7 @@ footer {
     }
     
     footer {
-        padding: 40px 5%;
+        padding: clamp(30px, 4vw, 40px) 5%;
     }
     
     .footer-content {
@@ -801,15 +829,16 @@ footer {
     
     .footer-nav {
         flex-direction: column;
-        gap: 30px;
+        gap: clamp(20px, 3vw, 30px);
     }
     
     .legal, .more {
         margin-right: 0;
-        margin-bottom: 20px;
+        margin-bottom: clamp(15px, 2vw, 20px);
     }
 }
 
+/* Ekstra små skjermer */
 @media (max-width: 480px) {
     header {
         padding: 10px 15px;
@@ -817,26 +846,72 @@ footer {
     
     .get-started.button,
     .read-definition {
-        padding: 12px 20px;
-        font-size: 0.9rem;
+        padding: clamp(10px, 1.2vw, 12px) clamp(15px, 2vw, 20px);
+        font-size: clamp(13px, 0.9vw, 0.9rem);
     }
     
     .member-logos {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: clamp(30px, 4vw, 40px);
     }
     
     .greencode-section,
     .mission-section,
     .member-section {
-        padding: 40px 15px;
+        padding: clamp(30px, 4vw, 40px) 15px;
     }
     
     .featured-logos {
-        padding: 20px 10px;
+        padding: clamp(15px, 2vw, 20px) clamp(8px, 1vw, 10px);
     }
     
     .social-links ul {
         justify-content: center;
+    }
+    
+    h1 {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+    
+    .greencode-h2,
+    .mission-h2 {
+        font-size: clamp(1.6rem, 6vw, 2rem);
+    }
+    
+    .info-txt {
+        font-size: clamp(0.95rem, 4vw, 1.1rem);
+    }
+}
+
+@media (max-height: 700px) {
+    .hero-section {
+        padding-top: clamp(20px, 3vw, 30px);
+        padding-bottom: clamp(20px, 3vw, 30px);
+    }
+    
+    .greencode-section,
+    .mission-section,
+    .member-section {
+        padding-top: clamp(30px, 5vw, 40px);
+        padding-bottom: clamp(30px, 5vw, 40px);
+    }
+}
+
+/* Handle viewport width units for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+    .logo {
+        height: max(35px, min(5vw, 50px));
+    }
+    
+    .logo-text {
+        font-size: max(20px, min(3vw, 28px));
+    }
+    
+    h1 {
+        font-size: max(2rem, min(5vw, 4.5rem));
+    }
+    
+    .info-txt {
+        font-size: max(1rem, min(2.5vw, 2.25rem));
     }
 }

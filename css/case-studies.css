@@ -72,9 +72,25 @@ header {
     margin: 0 auto;
 }
 
+/* Logo wrapper styles */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
 .logo {
-    height: 50px;
+    height: clamp(35px, 5vw, 50px); 
     width: auto;
+}
+
+.logo-text {
+    color: var(--primary-green);
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: clamp(20px, 3vw, 28px); 
+    margin-left: -2px; 
+    position: relative;
 }
 
 .navbar {
@@ -116,7 +132,6 @@ header::after {
     background-color: #BDDD60;
 }
 
-/* Dropdown styling */
 .dropdown {
     position: relative;
 }
@@ -169,10 +184,9 @@ header::after {
 }
 
 .dropdown-back-arrow {
-    display: none; /* Hidden by default for desktop */
+    display: none; 
 }
 
-/* Hamburger menu styles */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -191,7 +205,6 @@ header::after {
     border-radius: 3px;
 }
 
-/* Blog styles */
 .blog-wrapper {
     padding: 60px 5%;
     font-family: var(--body-font);
@@ -254,21 +267,19 @@ header::after {
     border-top-right-radius: 24px;
 }
 
-/* Icon styling for blog cards */
 .blog-card i.blog-card-image {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 200px;
-    font-size: 5rem; /* Adjust size as needed */
+    font-size: 5rem; 
     color: var(--primary-green);
     background-color: var(--secondary-green);
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
 }
 
-/* Optional: Add a subtle hover effect to icons */
 .blog-card:hover i.blog-card-image {
     transform: scale(1.05);
     transition: transform 0.3s ease;
@@ -355,7 +366,6 @@ header::after {
     z-index: 1;
 }
 
-/* Animation */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -548,7 +558,7 @@ footer {
     transform: translateY(-2px);
 }
 
-/* Media Queries */
+/* scaling */
 @media (max-width: 992px) {
     .footer-content {
         grid-template-columns: 1fr 1fr;
@@ -577,6 +587,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+    /* hide logo text in mobile */
+    .logo-text {
+        display: none;
+    }
+    
     header {
         z-index: 1000;
         background-color: var(--background-color);
@@ -636,12 +651,11 @@ footer {
         text-align: center;
     }
 
-    /* Update dropdown content for side sliding */
     .dropdown-content {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 70%;
+        width: 50%;
         height: 100vh;
         background-color: var(--background-color);
         z-index: 999;
@@ -662,7 +676,6 @@ footer {
         transform: translateX(0);
     }
     
-    /* Back arrow button */
     .dropdown-back-arrow {
         display: block;
         position: absolute;
@@ -676,7 +689,6 @@ footer {
         padding: 5px 10px;
     }
     
-    /* Dropdown link styles */
     .dropdown-content li a {
         padding: 15px 20px;
         text-align: center;
@@ -695,8 +707,7 @@ footer {
         text-align: center;
         width: 100%;
     }
-    
-    /* Blog grid adjustments */
+
     .blog-grid {
         grid-template-columns: 1fr;
     }
